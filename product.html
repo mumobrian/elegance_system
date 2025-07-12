@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Name | Elegance Fashion</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles/product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header (same as index.html) -->
+    <header class="header">
+        <!-- ... same header code ... -->
+    </header>
+
+    <!-- Product Detail -->
+    <section class="product-detail">
+        <div class="container">
+            <div class="product-gallery">
+                <!-- Main product image -->
+                <div class="main-image">
+                    <img src="images/product-1-large.jpg" alt="Product Name" id="mainProductImage">
+                </div>
+                
+                <!-- Thumbnail images -->
+                <div class="thumbnails">
+                    <img src="images/product-1-thumb1.jpg" alt="Thumbnail 1">
+                    <img src="images/product-1-thumb2.jpg" alt="Thumbnail 2">
+                    <img src="images/product-1-thumb3.jpg" alt="Thumbnail 3">
+                </div>
+            </div>
+            
+            <div class="product-info">
+                <h1>Classic Denim Jacket</h1>
+                <div class="price">
+                    <span class="current-price">$89.99</span>
+                    <span class="original-price">$120.00</span>
+                    <span class="discount">25% OFF</span>
+                </div>
+                
+                <div class="product-meta">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(42 reviews)</span>
+                    </div>
+                    <div class="availability">
+                        <i class="fas fa-check-circle"></i> In Stock (12 items)
+                    </div>
+                </div>
+                
+                <div class="product-description">
+                    <p>This classic denim jacket features a timeless design with modern details. Made from premium quality denim for durability and comfort.</p>
+                    <ul>
+                        <li>100% Cotton denim</li>
+                        <li>Machine washable</li>
+                        <li>Regular fit</li>
+                        <li>Front button closure</li>
+                    </ul>
+                </div>
+                
+                <div class="product-options">
+                    <div class="option">
+                        <h3>Color</h3>
+                        <div class="color-options">
+                            <div class="color-option active" style="background-color: #2c3e50;" data-color="Dark Blue"></div>
+                            <div class="color-option" style="background-color: #95a5a6;" data-color="Light Gray"></div>
+                            <div class="color-option" style="background-color: #000000;" data-color="Black"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="option">
+                        <h3>Size</h3>
+                        <div class="size-options">
+                            <div class="size-option">XS</div>
+                            <div class="size-option active">S</div>
+                            <div class="size-option">M</div>
+                            <div class="size-option">L</div>
+                            <div class="size-option">XL</div>
+                        </div>
+                        <a href="#" class="size-guide">Size Guide</a>
+                    </div>
+                    
+                    <div class="option">
+                        <h3>Quantity</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-btn minus">-</button>
+                            <input type="number" value="1" min="1" max="10">
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-actions">
+                    <button class="btn add-to-cart">Add to Cart</button>
+                    <button class="btn btn-outline">Wishlist</button>
+                </div>
+                
+                <div class="product-share">
+                    <span>Share:</span>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Tabs -->
+    <section class="product-tabs">
+        <div class="container">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="description">Description</button>
+                <button class="tab-btn" data-tab="details">Details</button>
+                <button class="tab-btn" data-tab="reviews">Reviews</button>
+                <button class="tab-btn" data-tab="shipping">Shipping</button>
+            </div>
+            
+            <div class="tab-content active" id="description">
+                <h2>Product Description</h2>
+                <p>Our Classic Denim Jacket is a wardrobe essential that never goes out of style. Designed with a regular fit for comfort and versatility, this jacket features a classic collar, front button closure, and adjustable cuffs. The premium denim fabric ensures durability while maintaining softness for all-day comfort.</p>
+                <p>Perfect for layering over t-shirts or pairing with dresses, this jacket transitions effortlessly from day to night. The timeless design makes it a staple piece that will last season after season.</p>
+            </div>
+            
+            <div class="tab-content" id="details">
+                <!-- Product details content -->
+            </div>
+            
+            <div class="tab-content" id="reviews">
+                <!-- Reviews content -->
+            </div>
+            
+            <div class="tab-content" id="shipping">
+                <!-- Shipping content -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <div class="container">
+            <h2>You May Also Like</h2>
+            <div class="product-grid">
+                <!-- Similar to homepage product grid -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="footer">
+        <!-- ... same footer code ... -->
+    </footer>
+
+    <script src="js.js"></script>
+    <script src="js/product.js"></script>
+</body>
+</html>

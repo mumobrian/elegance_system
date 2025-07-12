@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegance Fashion | Premium Clothing Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <p>FREE SHIPPING ON ALL ORDERS OVER $500 | NEW COLLECTION JUST DROPPED</p>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <div class="logo">
+                <a href="index.html"><h1>ELE<span>GANCE</span></h1></a>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="women.html">Women</a></li>
+                    <li><a href="men.html">Men</a></li>
+                    <li><a href="hotpicks.html" class="active">Hot Picks</a></li>
+                </ul>
+            </nav> 
+            <div class="header-icons">
+                <div class="search-container">
+              <a href="#" class="search-toggle" id="searchTrigger"><i class="fas fa-search"></i></a>
+             <div class="search-box" id="searchBox">
+               <form class="search-form" id="globalSearchForm">
+             <input type="text" id="globalSearchInput" placeholder="Search products..." autocomplete="off">
+              <button type="submit"><i class="fas fa-search"></i></button>
+    </form>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+                <a href="login.html"><i class="fas fa-user"></i></a>
+                <a href="cart.html"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a>
+            </div>
+        </div>
+    </header>
+
+   <!-- Hero Banner with Repeating Typewriter Animation -->
+<section class="hero-banner">
+    <div class="hero-content">
+        <h2 id="typewriter-title" class="typewriter-text"></h2>
+        <p id="typewriter-subtitle" class="typewriter-text"></p>
+        <a href="hotpicks.html" class="btn" id="shop-now-btn">Shop Now</a>
+    </div>
+</section>
+
+<style>
+    .hero-banner {
+        position: relative;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        background-size: cover;
+    }
+    
+    .typewriter-text {
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 2px solid white;
+        font-size: 0.9em;
+    }
+    
+    #typewriter-title {
+        font-size: 2.5em;
+        margin-bottom: 0.5em;
+    }
+    
+    #typewriter-subtitle {
+        font-size: 1.5em;
+        margin-bottom: 1.5em;
+    }
+    
+    .btn {
+        padding: 12px 30px;
+        color: white;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: bold;
+        transition: all 0.5s ease;
+        opacity: 0;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        background-color: #2196F3; /* Fallback solid blue */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .btn::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: #4CAF50;
+        transition: width 0.5s ease, height 0.5s ease;
+        z-index: -1;
+    }
+    
+    .btn:hover::before {
+        width: 300%;
+        height: 300%;
+    }
+    
+    .btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const titleElement = document.getElementById('typewriter-title');
+        const subtitleElement = document.getElementById('typewriter-subtitle');
+        const shopNowBtn = document.getElementById('shop-now-btn');
+        
+        const messages = [
+            {
+                title: "SUMMER COLLECTION 2023",
+                subtitle: "Discover the latest trends in fashion"
+            },
+            {
+                title: "NEW ARRIVALS",
+                subtitle: "Fresh styles for your wardrobe"
+            },
+            {
+                title: "LIMITED TIME OFFER",
+                subtitle: "Get 20% off on selected items"
+            }
+        ];
+        
+        let currentMessage = 0;
+        let animationInterval;
+        
+        function typeText(element, text, speed, callback) {
+            let i = 0;
+            element.innerHTML = '';
+            element.style.borderRight = "2px solid white";
+            
+            function typing() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typing, speed);
+                } else {
+                    element.style.borderRight = "none";
+                    if (callback) callback();
+                }
+            }
+            
+            typing();
+        }
+        
+        function startAnimation() {
+            shopNowBtn.style.opacity = "0";
+            
+            typeText(titleElement, messages[currentMessage].title, 100, function() {
+                typeText(subtitleElement, messages[currentMessage].subtitle, 50, function() {
+                    shopNowBtn.style.opacity = "1";
+                    setTimeout(nextMessage, 5000);
+                });
+            });
+        }
+        
+        function nextMessage() {
+            currentMessage = (currentMessage + 1) % messages.length;
+            startAnimation();
+        }
+        
+        startAnimation();
+        
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                clearInterval(animationInterval);
+            }
+        });
+    });
+</script>
+
+    <!-- Featured Categories -->
+    <section class="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Shop by Category</h2>
+                <p>Find your perfect style</p>
+            </div>
+            
+            <div class="category-grid">
+                <div class="category-item">
+                    <a href="women.html">
+                        <img src="C:\Users\chris\Pictures\Untitled design.png" alt="Women's Fashion" loading="lazy">
+                        <div class="category-overlay">
+                            <h3>Women</h3>
+                            <span class="btn btn-outline">View Collection</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="category-item">
+                    <a href="men.html">
+                        <img src="https://images.unsplash.com/photo-1505022610485-0249ba5b3675?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Men's Fashion" loading="lazy">
+                        <div class="category-overlay">
+                            <h3>Men</h3>
+                            <span class="btn btn-outline">View Collection</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="category-item">
+                    <a href="hotpicks.html">
+                        <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Accessories" loading="lazy">
+                        <div class="category-overlay">
+                            <h3>Hot Picks</h3>
+                            <span class="btn btn-outline">View Collection</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Products</h2>
+                <p>Our most popular items this season</p>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-badge hot">HOT</div>
+                    <div class="product-image">
+                        <a href="product.html?id=1">
+                            <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Denim Jacket" loading="lazy">
+                            <div class="quick-view">QUICK VIEW</div>
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="product.html?id=1">Classic Denim Jacket</a></h3>
+                        <div class="price">
+                            <span class="current-price">$89.99</span>
+                            <span class="original-price">$120.00</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-sm add-to-cart" data-id="1">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-badge new">NEW</div>
+                    <div class="product-image">
+                        <a href="product.html?id=2">
+                            <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Summer Dress" loading="lazy">
+                            <div class="quick-view">QUICK VIEW</div>
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="product.html?id=2">Floral Summer Dress</a></h3>
+                        <div class="price">
+                            <span class="current-price">$59.99</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-sm add-to-cart" data-id="2">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-badge sale">25% OFF</div>
+                    <div class="product-image">
+                        <a href="product.html?id=3">
+                            <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Casual Sneakers" loading="lazy">
+                            <div class="quick-view">QUICK VIEW</div>
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="product.html?id=3">Urban Sneakers</a></h3>
+                        <div class="price">
+                            <span class="current-price">$65.99</span>
+                            <span class="original-price">$87.99</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-sm add-to-cart" data-id="3">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-all">
+                <a href="hotpicks.html" class="btn btn-outline">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Join Our Fashion Community</h2>
+                <p>Subscribe to get exclusive offers, styling tips, and first access to new collections</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h3>ELE<span>GANCE</span></h3>
+                        <p>Your destination for contemporary fashion that combines elegance with modern trends.</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h4>Shop</h4>
+                        <ul>
+                            <li><a href="women.html">Women's Collection</a></li>
+                            <li><a href="men.html">Men's Collection</a></li>
+                            <li><a href="hotpicks.html">Weekly Hot Picks</a></li>
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">New Arrivals</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h4>Help</h4>
+                        <ul>
+                            <li><a href="#">Customer Service</a></li>
+                            <li><a href="#">Track Order</a></li>
+                            <li><a href="#">Returns & Exchanges</a></li>
+                            <li><a href="#">Shipping Information</a></li>
+                            <li><a href="#">Size Guide</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> 123 Fashion Avenue, New York</li>
+                            <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                            <li><i class="fas fa-envelope"></i> info@elegance.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2023 ELEGANCE. All rights reserved.</p>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.main-nav').classList.toggle('active');
+        });
+        
+        // Cart counter functionality
+        const cartButtons = document.querySelectorAll('.add-to-cart');
+        const cartCount = document.querySelector('.cart-count');
+        let count = 0;
+        
+        cartButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                count++;
+                cartCount.textContent = count;
+                
+                // Add animation effect
+                cartCount.parentElement.classList.add('animate');
+                setTimeout(() => {
+                    cartCount.parentElement.classList.remove('animate');
+                }, 300);
+            });
+        });
+        
+        // Newsletter form submission
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input').value;
+            alert(`Thank you for subscribing with ${email}! You'll receive our fashion updates soon.`);
+            this.reset();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Picks | Elegance Fashion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/hotpicks.css">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <p>FREE SHIPPING ON ALL ORDERS OVER $500 | NEW COLLECTION JUST DROPPED</p>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <div class="logo">
+                <a href="index.html"><h1>ELE<span>GANCE</span></h1></a>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="women.html">Women</a></li>
+                    <li><a href="men.html">Men</a></li>
+                    <li><a href="hotpicks.html" class="active">Hot Picks</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-icons">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-user"></i></a>
+                <a href="cart.html"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hot Picks Hero -->
+    <section class="hotpicks-hero">
+        <div class="container">
+            <h1>This Week's Hot Picks</h1>
+            <p>Trending styles curated just for you</p>
+        </div>
+    </section>
+
+    <!-- Product Filter -->
+    <section class="product-filter">
+        <div class="container">
+            <div class="filter-options">
+                <div class="filter-group">
+                    <label for="category">Category:</label>
+                    <select id="category">
+                        <option value="all">All Categories</option>
+                        <option value="women">Women</option>
+                        <option value="men">Men</option>
+                        <option value="accessories">Accessories</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="sort">Sort By:</label>
+                    <select id="sort">
+                        <option value="popular">Most Popular</option>
+                        <option value="newest">Newest</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hot Picks Grid -->
+    <section class="hotpicks-grid">
+        <div class="container">
+            <div class="products-container">
+                <!-- Product 1 -->
+                <div class="hotpicks-product">
+                    <div class="product-badge hot">HOT</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Leather Jacket">
+                        <div class="quick-view">QUICK VIEW</div>
+                        <div class="wishlist-icon"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Leather Jacket</h3>
+                        <div class="price">
+                            <span class="current-price">$199.99</span>
+                            <span class="original-price">$249.99</span>
+                        </div>
+                        <div class="color-options">
+                            <span class="color black active"></span>
+                            <span class="color brown"></span>
+                            <span class="color tan"></span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="hotpicks-product">
+                    <div class="product-badge new">NEW</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1520367445093-50dc08a59d9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Designer Sunglasses">
+                        <div class="quick-view">QUICK VIEW</div>
+                        <div class="wishlist-icon"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Designer Sunglasses</h3>
+                        <div class="price">
+                            <span class="current-price">$149.99</span>
+                        </div>
+                        <div class="color-options">
+                            <span class="color black active"></span>
+                            <span class="color gold"></span>
+                            <span class="color silver"></span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="hotpicks-product">
+                    <div class="product-badge sale">30% OFF</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Casual Sneakers">
+                        <div class="quick-view">QUICK VIEW</div>
+                        <div class="wishlist-icon"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Urban Street Sneakers</h3>
+                        <div class="price">
+                            <span class="current-price">$69.99</span>
+                            <span class="original-price">$99.99</span>
+                        </div>
+                        <div class="size-options">
+                            <span>Size:</span>
+                            <select>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                            </select>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="hotpicks-product">
+                    <div class="product-badge trending">TRENDING</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1539533018447-63fcce2678e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Silk Blouse">
+                        <div class="quick-view">QUICK VIEW</div>
+                        <div class="wishlist-icon"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Luxury Silk Blouse</h3>
+                        <div class="price">
+                            <span class="current-price">$89.99</span>
+                            <span class="original-price">$129.99</span>
+                        </div>
+                        <div class="color-options">
+                            <span class="color cream active"></span>
+                            <span class="color pink"></span>
+                            <span class="color blue"></span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="hotpicks-product">
+                    <div class="product-badge hot">HOT</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Leather Jacket">
+                        <div class="quick-view">QUICK VIEW</div>
+                        <div class="wishlist-icon"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Leather Jacket</h3>
+                        <div class="price">
+                            <span class="current-price">$199.99</span>
+                            <span class="original-price">$249.99</span>
+                        </div>
+                        <div class="color-options">
+                            <span class="color black active"></span>
+                            <span class="color brown"></span>
+                            <span class="color tan"></span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="hotpicks-product">
+                    <div class="product-badge new">NEW</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1520367445093-50dc08a59d9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Designer Sunglasses">
+                        <div class="quick-view">QUICK VIEW</div>
+                        <div class="wishlist-icon"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Designer Sunglasses</h3>
+                        <div class="price">
+                            <span class="current-price">$149.99</span>
+                        </div>
+                        <div class="color-options">
+                            <span class="color black active"></span>
+                            <span class="color gold"></span>
+                            <span class="color silver"></span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <a href="#" class="page-btn active">1</a>
+                <a href="#" class="page-btn">2</a>
+                <a href="#" class="page-btn">3</a>
+                <a href="#" class="page-btn next">Next <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Join Our Fashion Community</h2>
+                <p>Subscribe to get exclusive offers, styling tips, and first access to new collections</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h3>ELE<span>GANCE</span></h3>
+                        <p>Your destination for contemporary fashion that combines elegance with modern trends.</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h4>Shop</h4>
+                        <ul>
+                            <li><a href="women.html">Women's Collection</a></li>
+                            <li><a href="men.html">Men's Collection</a></li>
+                            <li><a href="hotpicks.html">Weekly Hot Picks</a></li>
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">New Arrivals</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h4>Help</h4>
+                        <ul>
+                            <li><a href="#">Customer Service</a></li>
+                            <li><a href="#">Track Order</a></li>
+                            <li><a href="#">Returns & Exchanges</a></li>
+                            <li><a href="#">Shipping Information</a></li>
+                            <li><a href="#">Size Guide</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> 123 Fashion Avenue, New York</li>
+                            <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                            <li><i class="fas fa-envelope"></i> info@elegance.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2023 ELEGANCE. All rights reserved.</p>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.main-nav').classList.toggle('active');
+        });
+        
+        // Cart counter functionality
+        const cartButtons = document.querySelectorAll('.add-to-cart');
+        const cartCount = document.querySelector('.cart-count');
+        let count = 0;
+        
+        cartButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                count++;
+                cartCount.textContent = count;
+                
+                // Add animation effect
+                cartCount.parentElement.classList.add('animate');
+                setTimeout(() => {
+                    cartCount.parentElement.classList.remove('animate');
+                }, 300);
+                
+                // Show added to cart message
+                const productName = this.closest('.hotpicks-product').querySelector('h3').textContent;
+                alert(`${productName} has been added to your cart!`);
+            });
+        });
+        
+        // Color selection
+        document.querySelectorAll('.color-options .color').forEach(color => {
+            color.addEventListener('click', function() {
+                this.parentElement.querySelector('.active').classList.remove('active');
+                this.classList.add('active');
+            });
+        });
+        
+        // Wishlist toggle
+        document.querySelectorAll('.wishlist-icon').forEach(icon => {
+            icon.addEventListener('click', function(e) {
+                e.stopPropagation();
+                this.querySelector('i').classList.toggle('far');
+                this.querySelector('i').classList.toggle('fas');
+                this.querySelector('i').classList.toggle('active');
+            });
+        });
+        
+        // Quick view
+        document.querySelectorAll('.quick-view').forEach(quickView => {
+            quickView.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const productImage = this.parentElement.querySelector('img').src;
+                const productName = this.closest('.hotpicks-product').querySelector('h3').textContent;
+                const productPrice = this.closest('.hotpicks-product').querySelector('.current-price').textContent;
+                
+                alert(`Quick View:\n\n${productName}\nPrice: ${productPrice}\n\nFull details available on product page.`);
+            });
+        });
+        
+        // Newsletter form submission
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input').value;
+            alert(`Thank you for subscribing with ${email}! You'll receive our fashion updates soon.`);
+            this.reset();
+        });
+    </script>
+</body>
+</html>

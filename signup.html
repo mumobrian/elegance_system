@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Elegance Fashion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/signup.css">
+</head>
+<body>
+    <!-- Back to Home Button -->
+    <a href="index.html" class="back-home-btn">
+        <i class="fas fa-arrow-left"></i> Back to Home
+    </a>
+
+    <!-- Signup Container -->
+    <div class="signup-container">
+        <!-- Left Side - Branding -->
+        <div class="signup-branding">
+            <div class="brand-overlay"></div>
+            <div class="brand-content">
+                <a href="index.html" class="logo">ELE<span>GANCE</span></a>
+                <h1>Join Our Community</h1>
+                <p>Create your account and discover the world of fashion</p>
+                <div class="benefits">
+                    <div class="benefit-item">
+                        <i class="fas fa-tag"></i>
+                        <span>Exclusive member discounts</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-shipping-fast"></i>
+                        <span>Free shipping on first order</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Personalized recommendations</span>
+                    </div>
+                </div>
+                <div class="brand-image">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Fashion Model">
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side - Signup Form -->
+        <div class="signup-form-container">
+            <div class="form-header">
+                <h2>Create Account</h2>
+                <p>Fill in your details to get started</p>
+            </div>
+            <!-- Social Signup Options -->
+            <div class="social-signup">
+                <a href="#" class="social-btn google">
+                    <img src="https://ssl.gstatic.com/images/branding/product/1x/gmail_2020q4_48dp.png" alt="Google">
+                    Continue with Google
+                </a>
+            </div>
+
+            <div class="divider">
+                <span>or</span>
+            </div>
+
+            <!-- Signup Form -->
+            <form class="signup-form">
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="fullname" placeholder="Enter your full name" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" placeholder="Create a password" required>
+                        <button type="button" class="toggle-password" aria-label="Show password">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="password-strength">
+                        <div class="strength-meter">
+                            <span class="strength-bar weak"></span>
+                            <span class="strength-bar medium"></span>
+                            <span class="strength-bar strong"></span>
+                        </div>
+                        <span class="strength-text">Password strength</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+                    </div>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a></label>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="newsletter"unchecked>
+                    <label for="newsletter">Subscribe to our newsletter for updates and offers (optional)</label>
+                </div>
+
+                <button type="submit" class="signup-btn">Create Account</button>
+
+                <div class="login-link">
+                    Already have an account? <a href="login.html">Sign in</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Toggle password visibility
+        document.querySelectorAll('.toggle-password').forEach(button => {
+            button.addEventListener('click', function() {
+                const passwordInput = this.parentElement.querySelector('input');
+                const icon = this.querySelector('i');
+                
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    icon.classList.remove('fa-eye');
+                    icon.classList.add('fa-eye-slash');
+                } else {
+                    passwordInput.type = 'password';
+                    icon.classList.remove('fa-eye-slash');
+                    icon.classList.add('fa-eye');
+                }
+            });
+        });
+
+        // Password strength indicator
+        const passwordInput = document.getElementById('password');
+        const strengthBars = document.querySelectorAll('.strength-bar');
+        const strengthText = document.querySelector('.strength-text');
+
+        passwordInput.addEventListener('input', function() {
+            const password = this.value;
+            let strength = 0;
+            
+            // Check password length
+            if (password.length > 0) strength++;
+            if (password.length >= 8) strength++;
+            
+            // Check for character variety
+            if (/[A-Z]/.test(password)) strength++;
+            if (/\d/.test(password)) strength++;
+            if (/[^A-Za-z0-9]/.test(password)) strength++;
+            
+            // Update strength meter
+            strengthBars.forEach((bar, index) => {
+                bar.classList.remove('active');
+                if (index < strength) {
+                    bar.classList.add('active');
+                }
+            });
+            
+            // Update strength text
+            if (strength <= 2) {
+                strengthText.textContent = 'Weak';
+                strengthText.style.color = '#e74c3c';
+            } else if (strength <= 4) {
+                strengthText.textContent = 'Medium';
+                strengthText.style.color = '#f39c12';
+            } else {
+                strengthText.textContent = 'Strong';
+                strengthText.style.color = '#27ae60';
+            }
+        });
+
+        // Form submission
+        document.querySelector('.signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // In a real implementation, you would handle the signup here
+            alert('Account created successfully! Redirecting to your dashboard...');
+            // window.location.href = 'dashboard.html';
+        });
+    </script>
+</body>
+</html>

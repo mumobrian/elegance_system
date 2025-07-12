@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Shopping Cart | Elegance Fashion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/cart.css">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <div class="top-nav">
+        <div class="container">
+            <a href="index.html" class="back-to-shop">
+                <i class="fas fa-arrow-left"></i> Continue Shopping
+            </a>
+            <div class="cart-steps">
+                <span class="active">Cart</span>
+                <i class="fas fa-chevron-right"></i>
+                <span>Shipping</span>
+                <i class="fas fa-chevron-right"></i>
+                <span>Payment</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">ELE<span>GANCE</span></a>
+            </div>
+            <div class="header-icons">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="account.html"><i class="fas fa-user"></i></a>
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">2</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Section -->
+    <main class="cart-container">
+        <div class="container">
+            <h1 class="cart-title">Your Shopping Bag</h1>
+            
+            <div class="cart-grid">
+                <!-- Cart Items Column -->
+                <div class="cart-items">
+                    <div class="cart-item">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Classic Denim Jacket">
+                        </div>
+                        <div class="product-details">
+                            <h3><a href="product.html">Classic Denim Jacket</a></h3>
+                            <div class="product-attributes">
+                                <span class="attribute">Color: <strong>Dark Blue</strong></span>
+                                <span class="attribute">Size: <strong>M</strong></span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="action-btn save-later"><i class="far fa-heart"></i> Save</button>
+                                <button class="action-btn remove"><i class="far fa-trash-alt"></i> Remove</button>
+                            </div>
+                        </div>
+                        <div class="product-pricing">
+                            <div class="quantity-control">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                            <div class="price">
+                                <span class="current-price">$89.99</span>
+                                <span class="original-price">$120.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1539533018447-63fcce2678e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Luxury Silk Blouse">
+                        </div>
+                        <div class="product-details">
+                            <h3><a href="product.html">Luxury Silk Blouse</a></h3>
+                            <div class="product-attributes">
+                                <span class="attribute">Color: <strong>Cream</strong></span>
+                                <span class="attribute">Size: <strong>S</strong></span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="action-btn save-later"><i class="far fa-heart"></i> Save</button>
+                                <button class="action-btn remove"><i class="far fa-trash-alt"></i> Remove</button>
+                            </div>
+                        </div>
+                        <div class="product-pricing">
+                            <div class="quantity-control">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                            <div class="price">
+                                <span class="current-price">$59.99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary Column -->
+                <aside class="order-summary">
+                    <h2>Order Summary</h2>
+                    <div class="summary-details">
+                        <div class="summary-row">
+                            <span>Subtotal (2 items)</span>
+                            <span>$149.98</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span class="free-shipping">Free</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Tax</span>
+                            <span>$12.49</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span class="total-price">$162.47</span>
+                        </div>
+                    </div>
+                    <button class="checkout-btn">Proceed to Checkout</button>
+                    <p class="secure-checkout">
+                        <i class="fas fa-lock"></i> Secure checkout
+                    </p>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- Saved Items Section -->
+            <section class="saved-items">
+                <h2>Saved For Later (1 item)</h2>
+                <div class="saved-grid">
+                    <div class="saved-item">
+                        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Urban Sneakers">
+                        <div class="saved-details">
+                            <h3>Urban Sneakers</h3>
+                            <div class="price">
+                                <span class="current-price">$65.99</span>
+                                <span class="original-price">$87.99</span>
+                            </div>
+                            <button class="move-to-cart">Move to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>ELE<span>GANCE</span></h3>
+                    <p>Your destination for contemporary fashion that combines elegance with modern trends.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 ELEGANCE. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>
